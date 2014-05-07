@@ -17,6 +17,6 @@ def main(prog=None):
         results.extend(lint_project(path))
     for result in results:
         if result.get('severity') == 'critical':
-            print(result['message'])
+            sys.stderr.write('%s\n' % result['message'])
             exit_code = 101
     sys.exit(exit_code)
