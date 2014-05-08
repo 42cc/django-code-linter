@@ -12,6 +12,7 @@ def main(prog=None):
     args = parser.parse_args()
 
     results = []
+    exit_code = 0
 
     for path in args.paths:
         results.extend(lint_project(path))
